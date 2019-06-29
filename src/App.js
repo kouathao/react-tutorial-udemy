@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Welcome from "./components/Welcome";
+import Clock from "./components/Clock";
+import Buttons from "./components/Buttons";
+import Greeting from "./components/Greeting";
+import LoginControl from "./components/LoginControl/LoginControl";
+import NumberList from "./components/NumberList/NumberList";
+import SweetAlert from "sweetalert2-react";
 
 function App() {
+  const numbers = [1, 2, 3, 4, 5];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Welcome name="Koua" />
+      <Clock />
+      <Buttons />
+      <Greeting isLoggedIn={true} />
+      <LoginControl />
+      <NumberList numbers={numbers} />
     </div>
   );
 }
